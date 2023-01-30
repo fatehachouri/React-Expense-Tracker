@@ -24,8 +24,8 @@ export default function Transactions({addIncome,addExpense}) {
     <div className="col-md-6 mx-auto">
         <div className="row g-3 my-3">
             <div className="col-auto">
-                <button disabled={!label || !amount} onClick={()=>addInc({id:uuidv4(),label,amount})} className="btn btn-sm btn-success mb-3">
-                    <i className="bi bi-bag-plus-fill"></i>
+                <button disabled={!label || !amount} onClick={()=>addExp({id:uuidv4(),label,amount})} className="btn btn-sm btn-danger mb-3">
+                    <i className="bi bi-bag-dash-fill"></i>
                 </button>
             </div>
             <div className="col-auto">
@@ -33,8 +33,8 @@ export default function Transactions({addIncome,addExpense}) {
                 <input value={amount} onChange={(event)=>setAmount(event.target.value)} type='number' className="form-control mb-2" placeholder="amount"/>
             </div>
             <div className="col-auto">
-                <button disabled={!label || !amount} onClick={()=>addExp({id:uuidv4(),label,amount})} className="btn btn-sm btn-danger mb-3">
-                    <i className="bi bi-bag-dash-fill"></i>
+            <button disabled={!label || !amount} onClick={()=>addInc({id:uuidv4(),label,amount})} className="btn btn-sm btn-success mb-3">
+                    <i className="bi bi-bag-plus-fill"></i>
                 </button>
             </div>
         </div>
